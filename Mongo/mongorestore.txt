@@ -1,0 +1,26 @@
+(REMOTO)
+
+mongorestore --host <hostname> --username <username> --password <password> 
+--authenticationDatabase <authDb>
+
+(LOCAL)
+mongorestore
+
+(REMOTO desde directorio específico)
+
+
+mongorestore --host <hostname> --username <username> --password <password> 
+--authenticationDatabase <authDb> --dir <directoryName>
+
+(REMOTO desde Archivo)
+
+
+mongorestore --host <hostname> --username <username> --password <password> 
+--authenticationDatabase <authDb> --archive=<fileName> --gzip
+
+
+(LOCAL)
+mongorestore 
+
+mongorestore --host localhost --username xxxx --password xxx
+--authenticationDatabase admin 

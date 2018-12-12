@@ -1,0 +1,21 @@
+(REMOTO)
+mongodump --host <hostname> --username <username> --password <password> 
+--authenticationDatabase <authDb>
+
+LOCAL
+mongodump
+mongodump --db Prueba
+
+(REMOTO indicando DB y Colección)
+mongodump --host <hostname> --username <username> --password <password> 
+--authenticationDatabase <authDb> --db <dumpDatabase> --collection <dumpCollection> 
+--out <directoryName>
+
+mongodump --host <hostname> --username <username> --password <password> 
+--authenticationDatabase <authDb> --db <dumpDatabase> --collection <dumpCollection> 
+--archivo=<nombreArchivo> --gzip
+
+Ejemplo:
+mongodump --host localhost --username xxxx --password xxxx
+--authenticationDatabase admin --db Prueba
+

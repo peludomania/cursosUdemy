@@ -1,0 +1,1 @@
+db.comida.find({"frutas":"pera"})//encuentra los registros que tengan platano dentro del array fruta 
