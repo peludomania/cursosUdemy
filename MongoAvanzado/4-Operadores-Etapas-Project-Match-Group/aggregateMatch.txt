@@ -1,0 +1,15 @@
+﻿db.zips.aggregate( [ 
+	{ $match : { state : "CA" } } ,
+	{ 
+		$group : {
+			_id :  "$city", 
+			poblacion : { $sum : "$pop" } 
+		}
+	}, 
+	{
+		$group : { 
+			_id : null,
+			poblacionMedia: { $avg : "$poblacion" }
+		}
+	}
+] )

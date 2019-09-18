@@ -1,0 +1,22 @@
+﻿db.zips.aggregate( [ { 
+	$group : { 
+		_id :  {
+			estado : "$state" , 
+			ciudad : "$city" 
+		},
+		buzonesCiudad : { 
+			$sum : { 
+				$cond : [ 
+					{ $gt : [ "$pop" , 1000 ] } , 
+					{ $divide : [ "$pop" , 1000 ] } , 
+					1	
+				] 
+			} 
+		}
+	} 
+} , {
+	$group : { 
+		_id : "$_id.estado",
+		mediaBuzonesCiudad : { $avg : "$buzonesCiudad" }
+	}
+} ] )
