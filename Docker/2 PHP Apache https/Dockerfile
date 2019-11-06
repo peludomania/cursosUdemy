@@ -14,6 +14,14 @@ RUN echo "<?php phpinfo();?>" > /var/www/html/info.php
 
 COPY startbootstrap-sb-admin-gh-pages /var/www/html
 
+COPY ssl.conf /etc/httpd/conf.d/default.conf
+
+COPY udemytest.crt /udemytest.crt
+
+COPY udemytest.key /udemytest.key
+
+EXPOSE 443
+
 CMD apachectl -DFOREGROUND
 
 

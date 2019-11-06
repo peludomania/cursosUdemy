@@ -1,0 +1,13 @@
+COMANDOS USADOS
+
+Crear el certificado (udemytest es el nombre, podemos poner cualquier cosa)
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout udemytest.key -out udemytest.crt
+
+Creamos el archivo ssl.conf que contiene la configuración del virtualhost de apache
+
+Construimos la imagen
+docker build -t apache:ssl-2 .
+
+Levantamos la imagen en el puerto 443
+docker run -d -p 443:443 apache:ssl-2
