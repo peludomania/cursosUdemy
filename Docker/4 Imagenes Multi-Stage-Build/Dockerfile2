@@ -1,0 +1,13 @@
+FROM centos as test
+
+RUN fallocate -l 10M /opt/file1 #esto crea un archivo de texto de 10 megas en la ubicación indicada
+
+RUN fallocate -l 20M /opt/test2
+
+RUN fallocate -l 30M /opt/test3
+
+FROM alpine
+
+COPY --from=test /opt/test2 /opt/myfile
+
+

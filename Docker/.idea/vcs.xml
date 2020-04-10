@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4 Imagenes Multi-Stage-Build/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/4 Multi-Stage-Build/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Imagen Symfony 4/symfony4-restful" vcs="Git" />
+  </component>
+</project>
